@@ -1,2 +1,30 @@
-print('hello')
-print('goodbye')
+#⭐⭐ Ask for a list of grades and print the average letter grade.
+
+def letter_grade(number_grade):
+    if 60 > number_grade > 0:
+        return 'F'
+    elif 70 > number_grade > 60:
+        return 'D'
+    elif 80 > number_grade > 70:
+        return 'C'
+    elif 90 > number_grade > 80:
+        return 'B'
+    elif 100 > number_grade > 90:
+        return 'A'
+    else:
+        return 'grade not valid'
+
+def grade_average(grades):
+    average = sum(grades) / len(grades)
+    return average
+
+    
+user_input = input("Enter items grades by space: ")
+
+grades = user_input.split()
+
+grades = [int(item) for item in grades]
+
+average = grade_average(grades)
+
+print(f'Your average is: {average}')
